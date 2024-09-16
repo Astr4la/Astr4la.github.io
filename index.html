@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Genshin Impact Smash Or Pass!</title>
+        <meta name="description" content="Smash or pass is a game thats quite popular on internet forums. Genshin Impact is an action role-playing game that was released amidst the pandemic and is riddled with admittedy attractive characters">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="coverdiv"></div>
+        <div id="resetcontainer">
+            <div id="fillerfilet"></div>
+            <div id="logocontainer">
+                <img id="logo"  src="/images/logo.png" alt="Genshin Smash Logo" style="vertical-align: top;">
+            </div>
+            <div id="rrcontainer">
+                <button id="reset" onclick="reset()">RESET</button>
+                <button id="resetall" onclick="resetall()">RESET ALL</button>
+            </div>
+        </div>
+
+        <div id="center">
+            <div id="limageholder">
+                <img id="limage" src="/images/Aether_Card.webp">
+            </div>
+
+            <div id="centerpage"> 
+                <div id="cnamecontainer">
+                    <p id="cname">Aether</p>
+                </div>
+                <div id="cimagecontainer">
+                    <img id="cimage"  src="/images/Aether.webp">
+                </div>
+                <div id="textstuff">
+                    <button id="left" onclick="back(); checkcolor()"></button>
+                    <p id="character">Character</p>
+                    <input id="input" type='text' onkeypress='validate(event)' onblur='legalnumber(); fat();checkcolor()' min="1" max="88" maxlength="2">
+                    <p id="total">Out Of 88</p>
+                    <button id="right" onclick="next(); checkcolor()"></button>
+                </div>
+                <div id="spcontain">
+                    <button onclick="smash(1); next(); checkcolor(); checknumbers()" id="smash" >SMASH</button>
+                    <button onclick="pass(1); next(); checkcolor(); checknumbers()" id="pass" >PASS</button>
+                </div>
+            </div>
+        </div>
+        <div id="numberslol">
+            <div id="greennum">
+                <h4 id="snumber">0</h>
+            </div>
+            <div id="rednum">
+                <p id="pnumber">0</p>
+            </div>
+        </div>
+        <div id="barcontainer">
+            <div id="lhalf">
+                <div id="smashbar">
+                    <div id="sbars"></div>
+                </div>
+            </div>
+            <div id="rhalf">
+                <div id="passbar">
+                    <div id="pbars"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="starty"> 
+            <button id="start" onclick="clicked()">START</button>
+        </div>
+
+        <div id="endstuff">
+            <div id="donetext">
+                <p id="finished">You Finished!</p>
+            </div>
+            <div id="restartcontainer">
+                <button id="restart" onclick="restart()"></button>
+            </div>
+            <div id="filler">
+                <button id="statistics" onclick="lastdisplay()">STATS</a>
+            </div>
+        </div>
+
+    <div id="all">
+
+        <div id="containerstats">
+            <p id="ssmash">0 Smashes 0 Passes 0 N/A</p>
+        </div>
+        <div id="container"></div>
+        <div id="containerpass"></div>
+        <div id="containerundecided"></div>
+
+    </div>
+
+
+
+
+
+        <script src="script.js"></script>
+    </body> 
+</html>             
