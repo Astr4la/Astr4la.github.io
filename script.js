@@ -5,20 +5,12 @@ setTimeout(()=>{
 
 var input=1;
 function hide(){
-  document.getElementById("cname").style.display="none";
-  document.getElementById("cimage").style.display="none";
-  document.getElementById("limage").style.display="none";
-  document.getElementById("smash").style.display="none";
-  document.getElementById("pass").style.display="none";
-  document.getElementById("character").style.display="none";
-  document.getElementById("total").style.display="none";
-  document.getElementById("input").style.display="none";
-  document.getElementById("right").style.display="none";
-  document.getElementById("left").style.display="none";
-  document.getElementById("smashbar").style.display="none";
-  document.getElementById("passbar").style.display="none";
+  document.getElementById("center").style.display="none";
+  document.getElementById("numberslol").style.display="none";
+  document.getElementById("barcontainer").style.display="none";
   document.getElementById("reset").style.display="none";
   document.getElementById("resetall").style.display="none";
+
  }
 
 hide();
@@ -46,8 +38,6 @@ function validate(evt) {
   }
   document.getElementById("input").value = 1;
 
-document.getElementById("restart").style.display="none";
-document.getElementById("finished").style.display="none";
 
 
 
@@ -427,8 +417,11 @@ function smash(a){
     hide();
     endshow();
   }
+  let pedo = document.getElementById("input").value
 
-
+  if((pedo == 23) || (pedo == 24) || (pedo == 38) || (pedo == 44) || (pedo == 55) || (pedo == 61) || (pedo == 66) || (pedo == 69) || (pedo == 84)){
+    child();
+  }
 }
 function pass(a){
   if(document.getElementById("input").value < 88){
@@ -480,32 +473,21 @@ function checkcolor(){
 
 
 function clicked(){
-  document.getElementById("start").style.display="none";  
-  document.getElementById("cname").style.display="block";
-  document.getElementById("cimage").style.display="block";
-  document.getElementById("limage").style.display="block";
-  document.getElementById("smash").style.display="flex";
-  document.getElementById("pass").style.display="flex";
-  document.getElementById("character").style.display="block";
-  document.getElementById("total").style.display="block";
-  document.getElementById("input").style.display="block"; 
-  document.getElementById("right").style.display="block";
-  document.getElementById("left").style.display="block";  
-  document.getElementById("smashbar").style.display="block";
-  document.getElementById("passbar").style.display="block";  
-  document.getElementById("reset").style.display="flex";
-  document.getElementById("resetall").style.display="flex";  
+  document.getElementById("starty").style.display="none";  
+  document.getElementById("center").style.display="flex";
+  document.getElementById("numberslol").style.display="flex";
+  document.getElementById("barcontainer").style.display="flex";
+  document.getElementById("reset").style.display="block";
+  document.getElementById("resetall").style.display="block";  
+
 }
 
 
 
 
 function endshow(){
-document.getElementById("restart").style.display="block";
-document.getElementById("finished").style.display="block";
-document.getElementById("statistics").style.display="flex";
-
-}
+  document.getElementById("endstuff").style.display="flex";
+} 
   
   
 
@@ -514,11 +496,9 @@ function restart(){
   document.getElementById("cname").innerHTML = endChar.cname;
   document.getElementById("cimage").src = endChar.cimage;
   document.getElementById("limage").src = endChar.limage;
-  document.getElementById("restart").style.display="none";
-  document.getElementById("finished").style.display="none";
+  document.getElementById("endstuff").style.display="none";
   document.getElementById("input").value = 1;
   document.getElementById("all").style.display="none";
-  document.getElementById("statistics").style.display="none";
 
   checkcolor();
   clicked();
@@ -617,8 +597,10 @@ function finalstats(){
   document.getElementById("ssmash").innerHTML =tline;
 }
 
+document.getElementById("endstuff").style.display="none";
 document.getElementById("all").style.display="none";
-document.getElementById("statistics").style.display="none";
+
+
 
 function lastdisplay(){
   displaysmashes(); 
@@ -627,4 +609,9 @@ function lastdisplay(){
   finalstats();
   document.getElementById("all").style.display="block";
 }
+
+function child(){
+  alert("https://www.fbi.gov/");
+}
+
 
