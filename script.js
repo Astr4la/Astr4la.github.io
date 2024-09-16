@@ -353,7 +353,7 @@ const GenshinCharacters = [
   ,{ cname: "Yoimiya",
     cimage: "/images/Yoimiya.webp" 
     ,limage: "/images/Yoimiya_Card.webp"}   
-  ,{ cname: "Yun Jun",
+  ,{ cname: "Yun Jin",
     cimage: "/images/Yun_Jin.webp"
     ,limage: "/images/Yun_Jin_Card.webp" }  
   ,{ cname: "Zhongli",
