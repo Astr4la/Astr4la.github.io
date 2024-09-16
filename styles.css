@@ -566,7 +566,7 @@ body{
 
 @media screen and (max-width: 800px){
     #centerpage, #numberslol, #barcontainer{
-        width: 100%;
+        width: 120%;
     }
     #limageholder{
         width: 0%
@@ -579,11 +579,11 @@ body{
     }
 
     #resetall{
-        margin-left:3%;
+        margin-left:5%;
         margin-top:85px;
     }
     #reset{
-        margin-left:3%;
+        margin-left:5%;
     }
     #logo{
         height:100px
